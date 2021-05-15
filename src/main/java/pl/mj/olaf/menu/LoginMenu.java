@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LoginMenu {
 
-    public void showLoginMenu(){
+    public void showLoginMenu() {
         System.out.println("----------OLAF------------");
         System.out.println("1. Logowanie");
         System.out.println("0. Zakończ program");
@@ -12,10 +12,12 @@ public class LoginMenu {
         System.out.println("Wybierz pozycję menu:");
     }
 
-    public void getMenuChoice(){
+    public boolean getMenuChoice() {
         Scanner scanner = new Scanner(System.in);
         int menuChoice = scanner.nextInt();
-        System.out.println(menuChoice);
-
+        if (menuChoice == 1) {
+            return true;
+        }
+        return false;
     }
 }
