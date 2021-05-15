@@ -1,5 +1,6 @@
 package pl.mj.olaf.model;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class Student {
@@ -7,9 +8,9 @@ public class Student {
     private String firstName;
     private String lastName;
     private String eMail;
-    private String dayOfBirth;
+    private LocalDate dayOfBirth;
 
-    public Student(UUID id, String firstName, String lastName, String eMail, String dayOfBirth) {
+    public Student(UUID id, String firstName, String lastName, String eMail, LocalDate dayOfBirth) {
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,11 +50,11 @@ public class Student {
         this.eMail = eMail;
     }
 
-    public String getDayOfBirth() {
+    public LocalDate getDayOfBirth() {
         return dayOfBirth;
     }
 
-    public void setDayOfBirth(String dayOfBirth) {
+    public void setDayOfBirth(LocalDate dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
     }
 }
