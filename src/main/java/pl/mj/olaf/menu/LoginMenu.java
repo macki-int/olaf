@@ -16,6 +16,7 @@ public class LoginMenu {
         Scanner scanner = new Scanner(System.in);
         int menuChoice = scanner.nextInt();
         //TODO validate choice
+        //TODO try-catch
 
         if (menuChoice == 1) {
             return true;
