@@ -1,10 +1,10 @@
 package pl.mj.olaf.dto;
 
-public class userDto {
+public class userDTO {
     private String eMail;
     private String password;
 
-    public userDto(String eMail, String password) {
+    public userDTO(String eMail, String password) {
         this.eMail = eMail;
         this.password = password;
     }
