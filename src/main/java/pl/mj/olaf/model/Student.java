@@ -1,16 +1,32 @@
 package pl.mj.olaf.model;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Entity
+@Table(name = "students")
 public class Student {
+    @Id
+    @Column(name = "id")
     private UUID id;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "e_mail")
     private String eMail;
+    @Column(name = "day_of_birth")
     private LocalDate dayOfBirth;
 
-    public Student(UUID id, String firstName, String lastName, String eMail, LocalDate dayOfBirth) {
+    public Student() {
+    }
+
+    public Student(String firstName, String lastName, String eMail, LocalDate dayOfBirth) {
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
