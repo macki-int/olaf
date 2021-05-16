@@ -1,5 +1,6 @@
 package pl.mj.olaf.menu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class LoginMenu {
@@ -14,11 +15,18 @@ public class LoginMenu {
 
     public boolean getMenuChoice() {
         Scanner scanner = new Scanner(System.in);
-        Character menuChoice = scanner.next().charAt(0);
+        Character menuChoice = '0';
+        try {
+            menuChoice = scanner.next().charAt(0);
+            System.out.println(menuChoice);
+        }
+        catch (InputMismatchException e){
+            System.out.println("to nie jest znak z listy");
+        }
         //TODO validate choice
         //TODO try-catch
 
-        if (menuChoice.equals("1")) {
+        if (menuChoice.equals('1')) {
             return true;
         }
         return false;
