@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="logo_olaf.png" alt="OLAF logo"></a>
+ <img src="http://troll-systems.pl/logo_olaf.png" alt="OLAF logo"></a>
 </p>
 
 <div align="center">
